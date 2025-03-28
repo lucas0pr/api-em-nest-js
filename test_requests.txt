@@ -1,0 +1,14 @@
+# Criar um novo produto
+curl -X POST http://localhost:3000/product -H "Content-Type: application/json" -d '{"nome_do_produto": "Produto A", "fornecedor": "Fornecedor X", "endereco_fornecedor": "Endereco X", "quantidade": 100, "descricao": "Descricao do Produto A", "data_registro": "2025-03-28", "data_update": "2025-03-28"}'
+
+# Obter todos os produtos
+curl http://localhost:3000/product
+
+# Obter um produto pelo ID
+curl http://localhost:3000/product/1
+
+# Atualizar um produto
+curl -X PUT http://localhost:3000/product/1 -H "Content-Type: application/json" -d '{"nome_do_produto": "Produto A Atualizado", "fornecedor": "Fornecedor X", "endereco_fornecedor": "Endereco X", "quantidade": 150, "descricao": "Descricao atualizada do Produto A", "data_registro": "2025-03-28", "data_update": "2025-03-28"}'
+
+# Deletar um produto
+curl -X DELETE http://localhost:3000/product/1
