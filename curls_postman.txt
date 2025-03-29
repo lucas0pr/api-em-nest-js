@@ -1,0 +1,22 @@
+# cURL 1 - POST - Criar um novo produto
+curl -X POST "http://localhost:3000/product" \
+-H "Content-Type: application/json" \
+-d '{
+  "nome_do_produto": "Cadeira",
+  "fornecedor": "Móveis",
+  "endereco_fornecedor": "Rua Gomes, 123, São Paulo - SP",
+  "quantidade": 50,
+  "descricao": "Cadeira ergonômica",
+  "data_registro": "2025-03-28T12:00:00Z",
+  "data_update": "2025-03-28T12:00:00Z"
+}'
+
+# cURL 2 - GET - Buscar todos os produtos
+curl -X GET "http://localhost:3000/product"
+
+# cURL 3 - GET - Buscar um produto por ID
+curl -X GET "http://localhost:3000/product/1"
+
+# cURL 4 - DELETE - Deletar um produto
+curl -X DELETE "http://localhost:3000/product/1"
+
